@@ -1,0 +1,28 @@
+{
+  "name": "expressjs-si52-2025-2026-tugas-darrield",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Let-sLearnCodingTogether/expressjs-si52-2025-2026-tugas-darrield.git"
+  },
+  "type" : "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Let-sLearnCodingTogether/expressjs-si52-2025-2026-tugas-darrield/issues"
+  },
+  "homepage": "https://github.com/Let-sLearnCodingTogether/expressjs-si52-2025-2026-tugas-darrield#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.19.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
