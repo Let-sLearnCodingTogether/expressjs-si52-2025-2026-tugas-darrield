@@ -1,60 +1,137 @@
-import Note from "../models/noteModel.js";
+import noteModel from "../models/noteModel.js";
 
 
 export const buatNote = async (req, res) => {
-  try {
-    const { title, content } = req.body;
-    const note = await Note.create({ title, content });
-    res.status(201).json(note);
-  } catch (error) {
-    res.status(400).json({ message: "Gagal membuat catatan", error });
-  }
+ try {
+        const request = req.body
+
+        const response = await noteModel.create({
+            title : request.title,
+            content : request.content,
+            createdAt : request.createdAt
+        })
+
+        res.status(201).json({
+            message : "Note berhasil di tambah",
+            data : response
+        })
+    } catch (error) {
+        res.status(500).json({
+            message : error.message,
+            data : null
+        })
+    }
+
 };
 
 
 export const listNotes = async (req, res) => {
-  try {
-    const notes = await Note.find();
-    res.status(200).json(notes);
-  } catch (error) {
-    res.status(500).json({ message: "Gagal mengambil catatan", error });
-  }
+        try {
+
+        const data = await noteModel.find({
+        })
+
+        res.status(201).json({
+            message : "list notes",
+            data : data
+        })
+    } catch (error) {
+        res.status(500).json({
+            message : error.message,
+            data : null
+        })
+    }
 };
 
 
 export const getNoteById = async (req, res) => {
   try {
-    const note = await Note.findById(req.params.id);
-    if (!note) return res.status(404).json({ message: "Catatan tidak ditemukan" });
-    res.status(200).json(note);
-  } catch (error) {
-    res.status(500).json({ message: "Gagal mengambil catatan", error });
-  }
+        const id = req.params.id
+        const request = req.body
+        
+        const data = await noteModel.findById(id)
+        
+
+        res.status(201).json({
+            message : "list notes",
+            data : data
+        })
+    } catch (error) {
+        res.status(500).json({
+            message : error.message,
+            data : null
+        })
+    }
 };
 
 
 export const updateNote = async (req, res) => {
   try {
-    const { title, content } = req.body;
-    const note = await Note.findByIdAndUpdate(
-      req.params.id,
-      { title, content },
-      { new: true }
-    );
-    if (!note) return res.status(404).json({ message: "Catatan tidak ditemukan" });
-    res.status(200).json(note);
-  } catch (error) {
-    res.status(400).json({ message: "Gagal memperbarui catatan", error });
-  }
+        const id = req.params?.id
+        const request = req.body
+
+        if(!id) {
+            return res.status(500).json({
+                message : "Id wajib di isi",
+                data : null
+            })
+        }
+
+        const response = await noteModel.findByIdAndUpdate(id, {
+            title : request.title,
+            content : request.content,
+            createdAt : request.createdAt
+        })
+
+        if (!response) {
+            return res.status(500).json({
+                message : "Notes gagal diupdate",
+                data : null
+            })
+        }
+
+        return res.status(200).json({
+            message : "Notes berhasil di update",
+            data : null
+        })
+
+ 
+    } catch (error) {
+        res.status(500).json({
+            message : error.message,
+            data : null
+        })
+    }
 };
 
 
 export const deleteNote = async (req, res) => {
   try {
-    const note = await Note.findByIdAndDelete(req.params.id);
-    if (!note) return res.status(404).json({ message: "Catatan tidak ditemukan" });
-    res.status(200).json({ message: "Catatan berhasil dihapus" });
-  } catch (error) {
-    res.status(500).json({ message: "Gagal menghapus catatan", error });
-  }
+        const id = req.params.id
+        if(!id) {
+            return res.status(500).json({
+                message : "Id wajib di isi",
+                data : null
+            })
+        }
+
+    const response = await noteModel.findByIdAndDelete(id)
+
+    if(response) {
+        return res.status(200).json({
+            message: "Note berhasil dihapus",
+            data : null
+        })
+    }
+    return res.status(404).json({
+        message : "Note tidak ditemukan",
+        data : null
+    })
+
+    } catch (error) {
+        res.status(500).json({
+            message : error,
+            data : null
+        })
+    }
 };

@@ -1,17 +1,16 @@
 import mongoose from "mongoose";
 
-const database = async () => {
-  try {
-    console.log("Melakukan koneksi ke MongoDB...");
+export const database = async () => {
+try {
+    console.log("Starting connection to mongodb...");
 
-    await mongoose.connect("mongodb://127.0.0.1:27017/Tugas?directConnection=true");
+    const response = await mongoose.connect("mongodb://127.0.0.1:27017/Tugas?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.8")
 
-    console.log(`Koneksi ke MongoDB berhasil di host: ${mongoose.connection.host}`);
-    console.log(`Database: ${mongoose.connection.name}`);
-  } catch (error) {
-    console.error("Gagal terkoneksi dengan MongoDB:", error.message);
-    process.exit(1);
-  }
-};
+    console.log(`Connected successfully to mongodb at : ${response.connection.host}`);
+} catch (error) {
+    console.log("Mongodb connection failed");
 
-export default database;
+    process.exit(1)
+}
+
+}

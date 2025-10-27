@@ -5,7 +5,7 @@
 		"description": "Membuat catatan pribadi",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "49380663",
-		"_collection_link": "https://darrieldapples-9584417.postman.co/workspace/46eac4bb-961f-4547-8df4-0c6d6b9a7510/collection/49380663-6c9a4214-9b24-4455-91c4-7d4620deb1b8?action=share&source=collection_link&creator=49380663"
+		"_collection_link": "https://darrieldapples-9584417.postman.co/workspace/Darriel-Dapples's-Workspace~46eac4bb-961f-4547-8df4-0c6d6b9a7510/collection/49380663-6c9a4214-9b24-4455-91c4-7d4620deb1b8?action=share&source=collection_link&creator=49380663"
 	},
 	"item": [
 		{
@@ -31,6 +31,11 @@
 					{
 						"key": "Accept",
 						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhcnJpZWxkIiwiZW1haWwiOiJkYXJyaWVsZEBtYWlsLmNvbSIsImlhdCI6MTc2MTU4NDE3MywiZXhwIjoxNzYxNTg3NzczfQ.zyz0jJDIbBSfK3Qrsa2Ecm1aFwCzJ4iRgR8UlepFCXg",
 						"type": "text"
 					}
 				],
@@ -85,6 +90,11 @@
 						"key": "Accept",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhcnJpZWxkMiIsImVtYWlsIjoiZGFycmllbGQyQG1haWwuY29tIiwiaWF0IjoxNzYxNTg0OTA1LCJleHAiOjE3NjE1ODg1MDV9.l5jACVnwZEVGn-h6PPeYUhm4RBBqyyRJ_7BlxlEU5XA",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -122,10 +132,15 @@
 						"key": "Accept",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhcnJpZWxkMiIsImVtYWlsIjoiZGFycmllbGQyQG1haWwuY29tIiwiaWF0IjoxNzYxNTg0OTA1LCJleHAiOjE3NjE1ODg1MDV9.l5jACVnwZEVGn-h6PPeYUhm4RBBqyyRJ_7BlxlEU5XA",
+						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://localhost:3000/api/note/68f506bdfe0850e8a0c7458b",
+					"raw": "http://localhost:3000/api/note/68f5c107fc8d611ac57fccf2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -134,7 +149,7 @@
 					"path": [
 						"api",
 						"note",
-						"68f506bdfe0850e8a0c7458b"
+						"68f5c107fc8d611ac57fccf2"
 					]
 				}
 			},
@@ -149,11 +164,16 @@
 						"key": "Accept",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhcnJpZWxkMiIsImVtYWlsIjoiZGFycmllbGQyQG1haWwuY29tIiwiaWF0IjoxNzYxNTg0OTA1LCJleHAiOjE3NjE1ODg1MDV9.l5jACVnwZEVGn-h6PPeYUhm4RBBqyyRJ_7BlxlEU5XA",
+						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"title\": \"Belajar\",\r\n  \"content\": \"Hari ini belajar\"\r\n}",
+					"raw": "{\r\n  \"title\": \"tes\",\r\n  \"content\": \"tes\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -161,7 +181,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/note/68f506bdfe0850e8a0c7458b",
+					"raw": "http://localhost:3000/api/note/68f5c107fc8d611ac57fccf2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -170,7 +190,7 @@
 					"path": [
 						"api",
 						"note",
-						"68f506bdfe0850e8a0c7458b"
+						"68f5c107fc8d611ac57fccf2"
 					]
 				}
 			},
@@ -185,6 +205,11 @@
 						"key": "Accept",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhcnJpZWxkMiIsImVtYWlsIjoiZGFycmllbGQyQG1haWwuY29tIiwiaWF0IjoxNzYxNTg0OTA1LCJleHAiOjE3NjE1ODg1MDV9.l5jACVnwZEVGn-h6PPeYUhm4RBBqyyRJ_7BlxlEU5XA",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -197,7 +222,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/note/68f506bdfe0850e8a0c7458b",
+					"raw": "http://localhost:3000/api/note/68f5c107fc8d611ac57fccf2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -206,7 +231,77 @@
 					"path": [
 						"api",
 						"note",
-						"68f506bdfe0850e8a0c7458b"
+						"68f5c107fc8d611ac57fccf2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"darrield2\",\r\n    \"email\" : \"darrield2@mail.com\",\r\n    \"password\" : \"tes12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"darrield2\",\r\n    \"email\" : \"darrield2@mail.com\",\r\n    \"password\" : \"tes12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
 					]
 				}
 			},
